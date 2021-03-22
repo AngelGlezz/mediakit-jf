@@ -260,7 +260,11 @@
 			</div>
 			<div class="video-container">
 				<div class="vimeo-wrapper">
-					<iframe src="https://player.vimeo.com/video/524434176?background=1&autoplay=1&loop=1&byline=0&title=0"
+					<iframe id="video-make-contenido" src="https://player.vimeo.com/video/524434176?background=1&autoplay=1&loop=1&byline=0&title=0"
+           			frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<iframe id="video-make-estrategia" src="https://player.vimeo.com/video/524436680?background=1&autoplay=1&loop=1&byline=0&title=0"
+           			frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<iframe id="video-make-experiencia" src="https://player.vimeo.com/video/524439365?background=1&autoplay=1&loop=1&byline=0&title=0"
            			frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 				<div class="title-section container">¿Qué hago?</div>
@@ -449,41 +453,43 @@
 					<div class="txt-sub">Así como cada posición tiene un propósito en la cancha, yo tengo contenidos únicos en cada plataforma con funciones especificas para que mis contenidos sean el 10 en cada una.</div>
 				</div>
 				<div id="video-galery-container">
-					<a class="social-video-link" data-fancybox="facebook" data-width="640" data-height="360" href="https://vimeo.com/524441580">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/face-black.png">
-						</div>
-					</a>
-					<a class="social-video-link" data-fancybox="twitter" data-width="640" data-height="360" href="#">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/twiter-black.png">
-						</div>
-					</a>
-					<a class="social-video-link" data-fancybox="instagram" data-width="640" data-height="360" href="https://vimeo.com/524442770">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/insta-black.png">
-						</div>
-					</a>
-					<a class="social-video-link" data-fancybox="tik-tok" data-width="640" data-height="360" href="https://vimeo.com/524445330">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/tik-tok-black.png">
-						</div>
-					</a>
-					<a class="social-video-link" data-fancybox="stories" data-width="640" data-height="360" href="#">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/stories-black.png">
-						</div>
-					</a>
-					<a class="social-video-link" data-fancybox="app" data-width="640" data-height="360" href="https://vimeo.com/524445330">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/jf.png">
-						</div>
-					</a>
-					<a class="social-video-link" data-fancybox="web" data-width="640" data-height="360" href="https://vimeo.com/524444335">
-						<div class="video-galery-item">
-							<img class="social-video" src="images/icon-web.png">
-						</div>
-					</a>
+					<div id="scroll-galery">
+						<a class="social-video-link"data-fancybox="facebook" href="https://vimeo.com/524441580">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/face-black.png">
+							</div>
+						</a>
+						<a class="social-video-link" data-fancybox="twitter" href="#">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/twiter-black.png">
+							</div>
+						</a>
+						<a class="social-video-link" data-fancybox="instagram" href="https://vimeo.com/524442770">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/insta-black.png">
+							</div>
+						</a>
+						<a class="social-video-link" data-fancybox="tik-tok" href="https://vimeo.com/524445330">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/tik-tok-black.png">
+							</div>
+						</a>
+						<a class="social-video-link" data-fancybox="stories" href="#">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/stories-black.png">
+							</div>
+						</a>
+						<a class="social-video-link" data-fancybox="app" href="https://vimeo.com/524445330">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/jf.png">
+							</div>
+						</a>
+						<a class="social-video-link" data-fancybox="web" href="https://vimeo.com/524444335">
+							<div class="video-galery-item">
+								<img class="social-video" src="images/icon-web.png">
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div id="quest">
@@ -627,7 +633,7 @@
 							<div class="logo"></div>
 							<div id="combo">
 								<select id="combo-select">
-									<option value="english">English</option>
+									<!--option value="english">English</option-->
 									<option value="spanish" selected>Spanish</option>
 								</select>
 							</div>

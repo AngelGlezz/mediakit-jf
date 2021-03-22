@@ -159,6 +159,33 @@ $(document).ready(function(){
 		)}, {offset: '40%'}
 	);
 
+	$("#estrategia-item").click(function() {
+		$("#video-make-contenido").css('display', 'none');
+		$("#video-make-experiencia").css('display', 'none');
+		$("#video-make-estrategia").css('display', 'block');
+		$(".video-item").hide();
+		$("#experiencia-item").show();
+		$("#contenido-item").show();
+	});
+
+	$("#experiencia-item").click(function() {
+		$("#video-make-contenido").css('display', 'none');
+		$("#video-make-estrategia").css('display', 'none');
+		$("#video-make-experiencia").css('display', 'block');
+		$(".video-item").hide();
+		$("#estrategia-item").show();
+		$("#contenido-item").show();
+	});
+
+	$("#contenido-item").click(function() {
+		$("#video-make-experiencia").css('display', 'none');
+		$("#video-make-estrategia").css('display', 'none');
+		$("#video-make-contenido").css('display', 'block');
+		$(".video-item").hide();
+		$("#experiencia-item").show();
+		$("#estrategia-item").show();
+	});
+
 	$('#combo-select').change(function () {
 		var idioma = $('#combo-select option:selected').val();
 		if (idioma == 'spanish') {

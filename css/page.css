@@ -561,7 +561,7 @@
     background-image: url(../images/tik-tok-w.png);
 }
 
-#txt-count, #percentage, #millions, #miles, .final {
+#txt-count, #percentage, #millions, #miles, .final, #video-make-experiencia, #video-make-estrategia {
     display: none;
 }
 
@@ -580,9 +580,14 @@
 }
 
 #video-galery-container {
+    display: block;
     width: 1310px;
     margin: auto;
-    overflow: auto;
+}
+
+#scroll-galery {
+    overflow-x: scroll;
+    display: flex;
 }
 
 .video-galery-item {
@@ -1003,10 +1008,39 @@
     color: #363636;
 }
 
+@media screen and (max-width: 1650px) {
+    #info {
+        height: 570px;
+    }
+
+    #info p {
+        font-size: 30px;
+    }
+
+    #info span {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+}
+
 @media screen and (max-width: 1310px) {
     #video-galery-container {
         width: 90%;
-        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #info br {
+        display: none;
+    }
+
+    #info p {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    #info {
+        height: 450px;
     }
 }
 
@@ -1038,8 +1072,17 @@
         font-size: 19px;
     }
 
+    #info {
+        height: 350px;
+    }
+
     #info p {
-        font-size: 31px;
+        font-size: 20px;
+    }
+
+    #info span {
+        font-size: 30px;
+        margin-top: 25px;
     }
 
     #cancha {
@@ -1062,10 +1105,6 @@
         width: 90%;
     }
 
-    #info p {
-        font-size: 28px;
-    }
-
     .video-item {
         width: 45%;
     }
@@ -1076,6 +1115,10 @@
 
     #container-timeline {
         display: block;
+    }
+
+    #info {
+        height: 380px;
     }
 
     #cancha {
@@ -1121,16 +1164,15 @@
         margin: auto!important;
     }
 
-    #info {
-        height: 660px;
-    }
-
     #info p {
         font-size: 20px;
     }
 
+    #info {
+        height: 530px;
+    }
+
     #info span {
-        font-size: 35px;
         margin-top: 50px;
         text-align: right;
     }
