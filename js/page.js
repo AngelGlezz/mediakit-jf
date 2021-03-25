@@ -14,58 +14,30 @@ $(document).ready(function(){
 		$('#navbarTogglerDemo02').removeClass('show');
 	});
 
-	$(".navbar-brand").click(function() {
+	$("#cover-item").click(function() {
 		$('body,html').animate({
             scrollTop: $('#cover').offset().top
         }, 1000);
         return false;
 	});
 
-	$("#who").click(function() {
+	$("#audiencia-item").click(function() {
 		$('body,html').animate({
-            scrollTop: $('#our-section').offset().top
+            scrollTop: $('#audiencia').offset().top
         }, 1000);
         return false;
 	});
 
-	$("#what").click(function() {
+	$("#quest-item").click(function() {
 		$('body,html').animate({
-            scrollTop: $('#our-section').offset().top
+            scrollTop: $('#quest').offset().top
         }, 1000);
         return false;
 	});
 
-	$(".brands").click(function() {
+	$("#client-item").click(function() {
 		$('body,html').animate({
-            scrollTop: $('#brands-section').offset().top
-        }, 1000);
-        return false;
-	});
-
-	$(".clients").click(function() {
-		$('body,html').animate({
-            scrollTop: $('#clients-section').offset().top
-        }, 1000);
-        return false;
-	});
-
-	$("#investors").click(function() {
-		$('body,html').animate({
-            scrollTop: $('#investors-section').offset().top
-        }, 1000);
-        return false;
-	});
-
-	$(".milestones").click(function() {
-		$('body,html').animate({
-            scrollTop: $('#milestones-section').offset().top
-        }, 1000);
-        return false;
-	});
-
-	$("#contact").click(function() {
-		$('body,html').animate({
-            scrollTop: $('#contact-section').offset().top
+            scrollTop: $('#client').offset().top
         }, 1000);
         return false;
 	});
@@ -78,10 +50,7 @@ $(document).ready(function(){
 				$('#countdown').hide();
 				$('#txt-count').fadeIn();
 			}
-		)}, {offset: '40%'}
-	);
-
-	$('.number-audiencia-container').waypoint(function(){
+		);
 		$('#count-percentage').animateNumber(
 			{number:85}, 
 			3000,
