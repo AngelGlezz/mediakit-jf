@@ -690,6 +690,31 @@
     margin: 80px auto;
 }
 
+#contact-section {
+    width: 100%;
+    padding: 150px 0px;
+    background-color: #000;
+}
+
+#contact-section .title-section {
+    width: 100%;
+    text-align: center;
+}
+
+.title-contact {
+    font-family: 'Proxima-Nova-Bold', sans-serif;
+    font-size: 30px;
+    color: #6cd542;
+    text-align: center;
+}
+
+.email-contact {
+    font-family: 'Proxima-Nova-Regular', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+
 #client {
     background-color: #fff;
     padding: 70px 0px;
@@ -847,7 +872,7 @@
 #footer-section {
     width: 100%;
     padding: 50px 0px;
-    background-color: #000;
+    background-color: #fff;
 }
 
 #footer-section .container .logo {
@@ -855,7 +880,7 @@
     height: 100px;
     margin: auto;
     margin: 30px auto 0px auto;
-    background-image: url(../images/underdog.png);
+    background-image: url(../images/ulogo.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -866,6 +891,11 @@
     height: 50px;
     margin: auto;
     margin-bottom: 15px;
+    background-image: url(../images/logo_juanfutbol_b.svg);
+}
+
+#footer-section .txt-sub {
+    color: #000;
 }
 
 #combo {
@@ -893,7 +923,7 @@
 }
 
 #date-dev {
-    color: #fff;
+    color: #000;
     font-size: 14px;
     font-family: 'Proxima-Nova-Regular';
     text-align: right;
@@ -902,7 +932,7 @@
 .footer-title-section {
     font-family: 'Proxima-Nova-Black', sans-serif;
     font-size: 18px;
-    color: #fff;
+    color: #000;
     font-weight: 900;
     cursor: pointer;
 }
@@ -910,7 +940,7 @@
 .footer-item {
     font-family: 'Proxima-Nova-Regular', sans-serif;
     font-size: 14px;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
