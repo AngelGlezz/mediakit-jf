@@ -63,7 +63,7 @@
     background-color: #000;
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand-mobile {
     width: 30px;
     height: 30px;
     margin-right: 40px!important;
@@ -73,27 +73,35 @@
     text-decoration: none;
 }
 
+#social-links .container .row {
+    width: 100%!important;
+}
+
+.navbar-brand-mobile {
+    margin: auto!important;
+}
+
 #navbarTogglerDemo02 {
     justify-content: flex-end;
 }
 
-#facebook {
+.facebook {
     background-image: url(../images/facebook-w.png);
 }
 
-#twitter {
+.twitter {
     background-image: url(../images/twitter-w.png);
 }
 
-#instagram {
+.instagram {
     background-image: url(../images/instagram-w.png);
 }
 
-#tiktok {
+.tiktok {
     background-image: url(../images/tik-tok-w.png);
 }
 
-#youtube { 
+.youtube { 
     background-image: url(../images/youtube-w.png);
 }
 
@@ -107,6 +115,10 @@
 
 .nav-link:hover {
     color: #fff;
+}
+
+#social-links {
+    display: none;
 }
 
 #cover {
@@ -158,17 +170,6 @@
     overflow: hidden;
     min-height: 790px;
 }
-
-/*.vimeo-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-.vimeo-wrapper iframe {
-    width: 100%;
-    height: 100vh;
-}*/
 
 .vimeo-wrapper {
     position: initial;
@@ -338,14 +339,14 @@
     transform: scale(1.75);
 }
 
-#slick-slide-control00 {
+#slick-slide-control02 {
     background-color: #2c2c2a!important;
     background-image: url(../images/icon-story.png);
     background-size: 80% 80% !important;
 
 }
 
-#slick-slide-control01 {
+#slick-slide-control05 {
     background-color: #000!important;
     background-image: url(../images/icon-juanpub.png);
     background-size: 50% 80% !important;
@@ -357,13 +358,13 @@
     background-size: 70% 70% !important;
 }
 
-#slick-slide-control02 {
+#slick-slide-control04 {
     background-color: #2c825a!important;
     background-image: url(../images/icon-dona.png);
     background-size: 70% 50% !important;
 }
 
-#slick-slide-control04 {
+#slick-slide-control01 {
     background-color: #000!important;
     background-image: url(../images/icon-esports.png);
     background-size: 70% 50% !important;
@@ -375,7 +376,7 @@
     background-size: 65% 30% !important;
 }
 
-#slick-slide-control05 {
+#slick-slide-control00 {
     background-color:#000!important;
     background-image: url(../images/icon-spotify.png);
     background-size: 70% 70% !important;
@@ -592,9 +593,6 @@
     background-image: url(../images/youtube-w.png);
 }
 
-/*, #percentage, #millions, #miles, .final, #video-make-experiencia, #video-make-estrategia {
-    
-}*/
 #txt-count {
     display: none;
 }
@@ -981,16 +979,12 @@
     background-position: center;
 }
 
-.timeline-item:nth-of-type(1) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(4) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(6) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(7) .timeline-img-container .timeline-img  {
+.timeline-item:nth-of-type(1) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(4) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(6) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(7) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(3) .timeline-img-container .timeline-img  {
     background-size: 70% 70%;
 }
 
 .timeline-item:nth-of-type(2) .timeline-img-container .timeline-img {
-    background-size: 60% 80%;
-}
-
-.timeline-item:nth-of-type(3) .timeline-img-container .timeline-img {
-    background-size: 80% 40%;
+    background-size: 80% 60%;
 }
 
 .timeline-item:nth-of-type(5) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(8) .timeline-img-container .timeline-img {
@@ -1007,7 +1001,7 @@
     top: 0px;
     left: 1.9rem;
     width: 0.08rem;
-    height: calc(95% - 3rem);
+    height: calc(94% - 3rem);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     background-color: rgb(204, 204, 204);
@@ -1116,7 +1110,15 @@
 
     .nav-link{
         font-size: 18px;
-        text-align: right;
+        text-align: left;
+    }
+
+    #social-links {
+        display: block;
+    }
+
+    .navbar-brand {
+        display: none!important;
     }
 
     #logo-container {
@@ -1200,9 +1202,10 @@
     }
 
     .video-item {
-        float: none;
-        width: 250px;
-        margin: 20px auto;
+        width: 150px;
+        height: 100px;
+        margin: 0px;
+        margin-right: 2px;
     }
 
     #cover-info {
