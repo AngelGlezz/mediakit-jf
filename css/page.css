@@ -162,6 +162,15 @@
     text-align: center;
 }
 
+.video-section {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 790px;
+}
+
 .video-container {
     position: relative;
     background-color: #000;
@@ -388,24 +397,20 @@
     background-size: 70% 70% !important;
 }
 
-#estrategia, #experiencia, #contenido-item {
-    display: none;
+.txt-video-container {
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    z-index: 9999;
+    padding: 10px;
 }
 
-.video-container .title-section {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.video-container .container {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
+.green-title { 
+    font-family: 'Proxima-Nova-Black', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #6cd542;
+    font-weight: 900;
 }
 
 .title-section {
@@ -773,38 +778,56 @@
 }
 
 #cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(1) {
-    background-image: url(../images/innovasport.png);
+    background-image: url(../images/toyota.png);
 }
 #cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(2) {
+    background-image: url(../images/puma.png);
+}
+#cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(3) {
+    background-image: url(../images/meat.png);
+}
+#cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(4) {
     background-image: url(../images/samsung.png);
 }
 
 #cancha .row .col-1:nth-of-type(4) .client-item:nth-of-type(1) {
-    background-image: url(../images/spotify.png);
+    background-image: url(../images/banorte.png);
+}
+#cancha .row .col-1:nth-of-type(4) .client-item:nth-of-type(2) {
+    background-image: url(../images/lawson.png);
 }
 
 #cancha .row .col-1:nth-of-type(5) .client-item:nth-of-type(1) {
-    background-image: url(../images/caliente.png);
-}
-#cancha .row .col-1:nth-of-type(5) .client-item:nth-of-type(2) {
-    background-image: url(../images/tecate.png);
+    background-image: url(../images/spotify.png);
 }
 
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(1) {
-    background-image: url(../images/ea-sport.png);
-    background-size: 80% 60%;
+    background-image: url(../images/caliente.png);
 }
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(2) {
-    background-image: url(../images/telcle.png);
+    background-image: url(../images/oppo.png);
 }
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(3) {
-    background-image: url(../images/cocacola.png);
+    background-image: url(../images/tecate.png);
 }
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(4) {
-    background-image: url(../images/tudn.png);
+    background-image: url(../images/fedex.png);
 }
 
 #cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(1) {
+    background-image: url(../images/ea-sport.png);
+}
+#cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(2) {
+    background-image: url(../images/telcle.png);
+}
+#cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(3) {
+    background-image: url(../images/cocacola.png);
+}
+#cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(4) {
+    background-image: url(../images/bbva.png);
+}
+
+#cancha .row .col-1:nth-of-type(8) .client-item:nth-of-type(1) {
     background-image: url(../images/nike.png);
     height: 90px;
 }
@@ -828,43 +851,59 @@
 }
 
 #cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(1) {
-    background-image: url(../images/innovasport.png);
+    background-image: url(../images/toyota.png);
 }
 #cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(2) {
+    background-image: url(../images/puma.png);
+}
+#cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(3) {
+    background-image: url(../images/meat.png);
+}
+#cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(4) {
     background-image: url(../images/samsung.png);
 }
 
 #cancha-vertical .row:nth-of-type(4) .client-item:nth-of-type(1) {
-    background-image: url(../images/spotify.png);
+    background-image: url(../images/banorte.png);
+}
+#cancha-vertical .row:nth-of-type(4) .client-item:nth-of-type(2) {
+    background-image: url(../images/lawson.png);
+    background-size: 70%;
 }
 
 #cancha-vertical .row:nth-of-type(5) .client-item:nth-of-type(1) {
-    background-image: url(../images/caliente.png);
-}
-#cancha-vertical .row:nth-of-type(5) .client-item:nth-of-type(2) {
-    background-image: url(../images/tecate.png);
+    background-image: url(../images/spotify.png);
 }
 
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(1) {
-    background-image: url(../images/ea-sport.png);
-    background-size: 70% 50%!important;
+    background-image: url(../images/caliente.png);
 }
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(2) {
-    background-image: url(../images/telcle.png);
+    background-image: url(../images/oppo.png);
 }
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(3) {
-    background-image: url(../images/cocacola.png);
+    background-image: url(../images/tecate.png);
 }
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(4) {
-    background-image: url(../images/tudn.png);
+    background-image: url(../images/fedex.png);
 }
 
 #cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(1) {
-    background-image: url(../images/nike.png);
+    background-image: url(../images/ea-sport.png);
+    background-size: 70% 50%!important;
+}
+#cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(2) {
+    background-image: url(../images/telcle.png);
+}
+#cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(3) {
+    background-image: url(../images/cocacola.png);
+}
+#cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(4) {
+    background-image: url(../images/tudn.png);
 }
 
-#cancha-vertical .row:nth-of-type(3), #cancha-vertical .row:nth-of-type(5) {
-    padding: 0px 70px;
+#cancha-vertical .row:nth-of-type(8) .client-item:nth-of-type(1) {
+    background-image: url(../images/nike.png);
 }
 
 #footer-section {
@@ -1018,6 +1057,22 @@
     font-family: 'Proxima-Nova-Regular', sans-serif;
     font-size: 13px;
     color: #363636;
+}
+
+.slick-prev {
+    left: 25px!important;
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.slick-next {
+    right: 25px!important;
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px!important;
 }
 
 @media screen and (max-width: 1650px) {
@@ -1242,7 +1297,7 @@
     }
 
     #cancha-vertical .row {
-        height: 14%!important;
+        height: 12.5%!important;
     }
 
     #cancha-vertical .row .client-item {

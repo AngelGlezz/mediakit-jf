@@ -10,14 +10,55 @@ $(document).ready(function(){
 		arrows: false
 	});
 
-	/*for (var i = 1; i <= 7; i++) {
-		(function(index) {
-			setTimeout(function() {
-				$(".txt-animate").removeClass("be-bold");
-				$("#txt-video-"+index).addClass("be-bold");
-			}, 5000);
-		})(i);
-	}*/
+	$('.video-section').slick();
+
+	var animateTextRecursive = function(a, original, obj){
+		if(a.length == 0){
+			p = original.splice(0,1);
+	  
+		  	var space = 20;
+	  
+			setTimeout(function(){ $(p).css({'font-weight':1000})}, space*0)
+			setTimeout(function(){ $(p).css({'font-weight':900})}, space*1)
+			setTimeout(function(){ $(p).css({'font-weight':800})}, space*2)
+			setTimeout(function(){ $(p).css({'font-weight':700})}, space*3)
+			setTimeout(function(){ $(p).css({'font-weight':600})}, space*4)
+			setTimeout(function(){ $(p).css({'font-weight':500})}, space*5)
+			setTimeout(function(){ $(p).css({'font-weight':400})}, space*6);
+			
+		
+			if(original.length == 0){
+				setTimeout(function(){ animatePs(obj)}, space*70);
+			}else{
+				setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*7);
+			}
+		  
+		}else{
+			p = a.splice(0,1);
+		
+			var space = 60
+		
+			setTimeout(function(){ $(p).css({'font-weight':400})}, space*0)
+			setTimeout(function(){ $(p).css({'font-weight':500})}, space*1)
+			setTimeout(function(){ $(p).css({'font-weight':600})}, space*2)
+			setTimeout(function(){ $(p).css({'font-weight':700})}, space*3)
+			setTimeout(function(){ $(p).css({'font-weight':800})}, space*4)
+			setTimeout(function(){ $(p).css({'font-weight':900})}, space*5)
+			setTimeout(function(){ $(p).css({'font-weight':1000})}, space*6);
+		
+			if(a.length == 0){
+				setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*200);
+			}else{
+				setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*20);
+			}
+		}
+	}
+	  
+	var animatePs = function(obj){
+		animateTextRecursive ($("p, span", obj), $("p, span", obj), obj)
+	}
+	  
+	animatePs($("#info"));
 	
 	$(".nav-link").click(function(){
 		$('#navbarTogglerDemo02').removeClass('show');
