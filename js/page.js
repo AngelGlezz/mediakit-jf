@@ -10,7 +10,10 @@ $(document).ready(function(){
 		arrows: false
 	});
 
-	$('.video-section').slick();
+	$('.video-section').slick({
+		dots: true,
+		arrows: false
+	});
 
 	var animateTextRecursive = function(a, original, obj){
 		if(a.length == 0){
