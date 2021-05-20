@@ -16,102 +16,74 @@ $(document).ready(function(){
 	});
 
 	if (parseInt($(window).width()) >= 768) {
-	var animateTextRecursive = function(a, original, obj){
-		if(a.length == 0){
-			p = original.splice(0,1);
-	  
-		  	var space = 20;
-	  
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':1000})}, space*0)
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':900})}, space*1)
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':800})}, space*2)
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':700})}, space*3)
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':600})}, space*4)
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':500})}, space*5)
-			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':400})}, space*6);
+		var animateTextRecursive = function(a, obj){
+			var p = a.splice(0,1);
 			
-		
-			if(original.length == 0){
-				setTimeout(function(){ animatePs(obj)}, space*70);
-			}else{
-				setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*7);
-			}
-		  
-		}else{
-			p = a.splice(0,1);
-		
-			var space = 60
-		
-			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':400})}, space*0)
-			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':500})}, space*1)
-			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':600})}, space*2)
-			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':700})}, space*3)
-			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':800})}, space*4)
-			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':900})}, space*5)
+			var space = 60;
+			
+			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':400})}, space*0);
+			setTimeout(function(){ $(p).css({'font-size': '38px' ,'font-weight':500})}, space*1);
+			setTimeout(function(){ $(p).css({'font-size': '40px' ,'font-weight':600})}, space*2);
+			setTimeout(function(){ $(p).css({'font-size': '43px' ,'font-weight':700})}, space*3);
+			setTimeout(function(){ $(p).css({'font-size': '45px' ,'font-weight':800})}, space*4);
+			setTimeout(function(){ $(p).css({'font-size': '47px' ,'font-weight':900})}, space*5);
 			setTimeout(function(){ $(p).css({'font-size': '50px' ,'font-weight':1000})}, space*6);
-		
+			
 			if(a.length == 0){
-				setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*200);
+			  setTimeout(function(){ animatePs(obj)}, space*200);
 			}else{
-				setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*20);
+			  setTimeout(function(){ animateTextRecursive(a, obj)}, space*20);
 			}
-		}
-	}
-	  
-	var animatePs = function(obj){
-		animateTextRecursive ($("p, span", obj), $("p, span", obj), obj)
-	}
-	  
-	animatePs($("#info"));
+		
+			setTimeout(function(){ $(p).css({'font-size': '48px' ,'font-weight':1000})}, space*20);
+			setTimeout(function(){ $(p).css({'font-size': '46px' ,'font-weight':900})}, space*21);
+			setTimeout(function(){ $(p).css({'font-size': '42px' ,'font-weight':800})}, space*22);
+			setTimeout(function(){ $(p).css({'font-size': '42px' ,'font-weight':700})}, space*23);
+			setTimeout(function(){ $(p).css({'font-size': '40px' ,'font-weight':600})}, space*24);
+			setTimeout(function(){ $(p).css({'font-size': '38px' ,'font-weight':500})}, space*25);
+			setTimeout(function(){ $(p).css({'font-size': '36px' ,'font-weight':400})}, space*26);
+		  }
+			
+		  var animatePs = function(obj){
+			animateTextRecursive ($("p, span", obj), obj)
+		  }
+			
+		  animatePs($("#info"));
 
 	} else if (parseInt($(window).width()) < 768) {
-		var animateTextRecursive = function(a, original, obj){
+		var animateTextRecursive = function(a, obj){
+			var p = a.splice(0,1);
+			
+			var space = 60;
+			
+			setTimeout(function(){ $(p).css({'font-size': '22px' ,'font-weight':400})}, space*0);
+			setTimeout(function(){ $(p).css({'font-size': '24px' ,'font-weight':500})}, space*1);
+			setTimeout(function(){ $(p).css({'font-size': '26px' ,'font-weight':600})}, space*2);
+			setTimeout(function(){ $(p).css({'font-size': '28px' ,'font-weight':700})}, space*3);
+			setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':800})}, space*4);
+			setTimeout(function(){ $(p).css({'font-size': '32px' ,'font-weight':900})}, space*5);
+			setTimeout(function(){ $(p).css({'font-size': '34px' ,'font-weight':1000})}, space*6);
+			
 			if(a.length == 0){
-				p = original.splice(0,1);
-		  
-				  var space = 20;
-		  
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':1000})}, space*0)
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':900})}, space*1)
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':800})}, space*2)
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':700})}, space*3)
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':600})}, space*4)
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':500})}, space*5)
-				setTimeout(function(){ $(p).css({'font-size': '23px' ,'font-weight':400})}, space*6);
-				
-			
-				if(original.length == 0){
-					setTimeout(function(){ animatePs(obj)}, space*70);
-				}else{
-					setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*7);
-				}
-			  
+			  setTimeout(function(){ animatePs(obj)}, space*200);
 			}else{
-				p = a.splice(0,1);
-			
-				var space = 60
-			
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':400})}, space*0)
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':500})}, space*1)
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':600})}, space*2)
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':700})}, space*3)
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':800})}, space*4)
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':900})}, space*5)
-				setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':1000})}, space*6);
-			
-				if(a.length == 0){
-					setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*200);
-				}else{
-					setTimeout(function(){ animateTextRecursive(a, original, obj)}, space*20);
-				}
+			  setTimeout(function(){ animateTextRecursive(a, obj)}, space*20);
 			}
-		}
-		  
-		var animatePs = function(obj){
-			animateTextRecursive ($("p, span", obj), $("p, span", obj), obj)
-		}
-		  
-		animatePs($("#info"));
+		
+			setTimeout(function(){ $(p).css({'font-size': '34px' ,'font-weight':1000})}, space*20);
+			setTimeout(function(){ $(p).css({'font-size': '32px' ,'font-weight':900})}, space*21);
+			setTimeout(function(){ $(p).css({'font-size': '30px' ,'font-weight':800})}, space*22);
+			setTimeout(function(){ $(p).css({'font-size': '28px' ,'font-weight':700})}, space*23);
+			setTimeout(function(){ $(p).css({'font-size': '26px' ,'font-weight':600})}, space*24);
+			setTimeout(function(){ $(p).css({'font-size': '24px' ,'font-weight':500})}, space*25);
+			setTimeout(function(){ $(p).css({'font-size': '22px' ,'font-weight':400})}, space*26);
+		  }
+			
+		  var animatePs = function(obj){
+			animateTextRecursive ($("p, span", obj), obj)
+		  }
+			
+		  animatePs($("#info"));
     }
 	
 	$(".nav-link").click(function(){
