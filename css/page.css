@@ -177,7 +177,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    min-height: 790px;
+    min-height: 1100px;
 }
 
 .vimeo-wrapper {
@@ -214,7 +214,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 750px;
+    height: 1100px;
     margin: auto;
     z-index: 0;
     background-color: transparent!important;
@@ -833,6 +833,10 @@
 #cancha .row .col-1:nth-of-type(5) .client-item:nth-of-type(1) {
     background-image: url(../images/spotify.png);
 }
+#cancha .row .col-1:nth-of-type(5) .client-item:nth-of-type(2) {
+    background-image: url(../images/vw.png);
+    background-size: 80%;
+}
 
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(1) {
     background-image: url(../images/caliente.png);
@@ -906,6 +910,11 @@
 
 #cancha-vertical .row:nth-of-type(5) .client-item:nth-of-type(1) {
     background-image: url(../images/spotify.png);
+    background-size: 60%;
+}
+#cancha-vertical .row:nth-of-type(5) .client-item:nth-of-type(2) {
+    background-image: url(../images/vw.png);
+    background-size: 40%;
 }
 
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(1) {
@@ -1108,21 +1117,6 @@
     font-size: 40px!important;
 }
 
-@media screen and (max-width: 1650px) {
-    #info {
-        height: 570px;
-    }
-
-    #info p {
-        font-size: 30px;
-    }
-
-    #info span {
-        font-size: 40px;
-        margin-top: 50px;
-    }
-}
-
 @media screen and (max-width: 1310px) {
     #video-galery-container {
         width: 90%;
@@ -1130,17 +1124,8 @@
 }
 
 @media screen and (max-width: 1200px) {
-    #info br {
-        display: none;
-    }
-
     #info p {
         margin-bottom: 10px;
-        font-size: 25px;
-    }
-
-    #info {
-        height: 450px;
     }
 }
 
@@ -1170,19 +1155,6 @@
 
     .carousel-description {
         font-size: 19px;
-    }
-
-    #info {
-        height: 350px;
-    }
-
-    #info p {
-        font-size: 20px;
-    }
-
-    #info span {
-        font-size: 30px;
-        margin-top: 25px;
     }
 
     #cancha {
@@ -1226,7 +1198,11 @@
     }
 
     #info {
-        height: 380px;
+        height: 780px;
+    }
+
+    .txt-animate {
+        font-size: 23px;
     }
 
     #cancha {
@@ -1288,17 +1264,8 @@
         margin: auto!important;
     }
 
-    #info p {
-        font-size: 20px;
-    }
-
     #info {
-        height: 530px;
-    }
-
-    #info span {
-        margin-top: 50px;
-        text-align: right;
+        height: 1030px;
     }
 
     .video-item {
