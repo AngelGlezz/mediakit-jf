@@ -203,7 +203,9 @@
  }
 
  .video-section .video-container .vimeo-wrapper iframe {
-     top: 43%;
+     top: 35%;
+     height: 70vw;
+     min-height: 125vh;
  }
 
 #info {
@@ -436,7 +438,7 @@
 
 .video-section .slick-dots li.slick-active button:before {
     color: #6cd542;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .video-section .slick-dots li button:before {
