@@ -1036,6 +1036,20 @@
     padding-left: 0px!important;
 }
 
+.footer-logo {
+    background-image: url(../images/underdog-black.png);
+    width: 150px;
+    height: 100px;
+    margin: 30px auto 0px auto;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer-section .container .row .col-12 .row {
+    height: 235px;
+}
+
 #container-timeline {
     max-width: 768px!important;
     overflow: auto;
