@@ -1236,7 +1236,7 @@
         height: 300px;
     }
 
-    #footer-section .container .logo, #combo select, #date-dev {
+    #footer-logo, #combo select, #date-dev {
         float: none;
         margin: 30px auto;
     }
