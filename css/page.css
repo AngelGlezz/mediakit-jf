@@ -247,6 +247,10 @@
     background-color: #f1f0f0;
 }
 
+#milestones-section .title-section {
+    color: #000;
+}
+
 #container-carousel {
     height: 850px;
 }
