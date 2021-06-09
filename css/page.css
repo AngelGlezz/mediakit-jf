@@ -512,12 +512,12 @@
 }
 
 #team {
-    background-color: #fff;
+    background-color: #000;
     padding: 70px 0px;
 }
 
 #team .container .title-section {
-    color: #000;
+    color: #6cd542;
 }
 
 #team .container {
@@ -546,14 +546,14 @@
     font-family: 'Proxima-Nova-Extrabold';
     font-size: 22px;
     font-weight: 900;
-    color: #000;
+    color: #fff;
 }
 
 .person-job {
     text-align: center;
     font-family: 'Proxima-Nova-Regular';
     font-size: 23px;
-    color: #000;
+    color: #fff;
 }
 
 #audiencia {
