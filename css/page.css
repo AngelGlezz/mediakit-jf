@@ -1,49 +1,49 @@
 @font-face
 {
    font-family: "Proxima-Nova-Black";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Black.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Black.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "Proxima-Nova-Bold";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Bold.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Bold.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "Proxima-Nova-Extrabold";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Extrabold.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Extrabold.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "Proxima-Nova-Regular";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Regular.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Regular.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-Black";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-Black.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-Black.ttf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-Bold";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-Bold.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-Bold.ttf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-ExtraBold";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-ExtraBold.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-ExtraBold.ttf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-Regular";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-Regular.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-Regular.ttf) format("opentype");
 }
 
 .page {
@@ -146,7 +146,7 @@
     width: 100%;
     height: 115px;
     margin: 0px auto 50px auto;
-    background-image: url(../images/juanfutbol.svg);
+    background-image: url(../images/logo_juanfutbol_w.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -1047,7 +1047,7 @@
 }
 
 #footer-section .container .row .col-12 .row {
-    height: 235px;
+    height: 320px;
 }
 
 #container-timeline {
