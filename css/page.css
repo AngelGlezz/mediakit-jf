@@ -1,49 +1,49 @@
 @font-face
 {
    font-family: "Proxima-Nova-Black";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Black.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Black.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "Proxima-Nova-Bold";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Bold.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Bold.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "Proxima-Nova-Extrabold";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Extrabold.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Extrabold.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "Proxima-Nova-Regular";
-   src: url(../fonts/proxima_ssv/Proxima-Nova-Regular.otf) format("opentype");
+   src: url(../fonts/Proxima-Nova-Regular.otf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-Black";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-Black.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-Black.ttf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-Bold";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-Bold.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-Bold.ttf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-ExtraBold";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-ExtraBold.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-ExtraBold.ttf) format("opentype");
 }
 
 @font-face
 {
    font-family: "BodoniModa-Regular";
-   src: url(../fonts/Bodoni_Moda/BodoniModa-Regular.ttf) format("opentype");
+   src: url(../fonts/BodoniModa-Regular.ttf) format("opentype");
 }
 
 .page {
@@ -63,7 +63,7 @@
     background-color: #000;
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand-mobile {
     width: 30px;
     height: 30px;
     margin-right: 40px!important;
@@ -71,29 +71,38 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-decoration: none;
+    z-index: 1040;
+}
+
+#social-links .container .row {
+    width: 100%!important;
+}
+
+.navbar-brand-mobile {
+    margin: auto!important;
 }
 
 #navbarTogglerDemo02 {
     justify-content: flex-end;
 }
 
-#facebook {
+.facebook {
     background-image: url(../images/facebook-w.png);
 }
 
-#twitter {
+.twitter {
     background-image: url(../images/twitter-w.png);
 }
 
-#instagram {
+.instagram {
     background-image: url(../images/instagram-w.png);
 }
 
-#tiktok {
+.tiktok {
     background-image: url(../images/tik-tok-w.png);
 }
 
-#youtube { 
+.youtube { 
     background-image: url(../images/youtube-w.png);
 }
 
@@ -103,6 +112,14 @@
     font-family: 'Proxima-Nova-Regular', sans-serif;
     font-size: 18px;
     margin-right: 40px;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+#social-links {
+    display: none;
 }
 
 #cover {
@@ -126,11 +143,11 @@
     height: 200px;
 }
 
-#info-logo {
+.info-logo {
     width: 100%;
     height: 115px;
     margin: 0px auto 50px auto;
-    background-image: url(../images/juanfutbol.svg);
+    background-image: url(../images/logo_juanfutbol_w.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -146,25 +163,51 @@
     text-align: center;
 }
 
+.video-section {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 130vh;
+    overflow: hidden;
+    min-height: 790px;
+}
+
 .video-container {
     position: relative;
     background-color: #000;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    min-height: 790px;
+    min-height: 950px;
 }
 
 .vimeo-wrapper {
+    position: initial;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+ }
+ .vimeo-wrapper iframe {
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
     position: absolute;
-    width: 100%;
-    height: 100vh;
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
 
-.vimeo-wrapper iframe {
-    width: 100%;
-    height: 100vh;
-}
+ .video-section .video-container .vimeo-wrapper {
+    position: relative;
+ }
+
+ .video-section .video-container .vimeo-wrapper iframe {
+     top: 35%;
+     height: 70vw;
+     min-height: 125vh;
+ }
 
 #info {
     position: absolute;
@@ -172,10 +215,11 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 750px;
+    height: 700px;
     margin: auto;
     z-index: 0;
     background-color: transparent!important;
+    display: none;
 }
 
 #info p {
@@ -183,6 +227,11 @@
     font-size: 36px;
     color: #fff;
     text-align: left;
+}
+
+.be-bold {
+    font-weight: 900!important;
+    font-family: 'Proxima-Nova-Bold', sans-serif!important;
 }
 
 #info span {
@@ -195,8 +244,12 @@
 
 #milestones-section {
     width: 100%;
-    padding: 50px 0px 250px 0px;
+    padding: 50px 0px 100px 0px;
     background-color: #f1f0f0;
+}
+
+#milestones-section .title-section {
+    color: #000;
 }
 
 #container-carousel {
@@ -252,7 +305,7 @@
     width: 47%;
     height: 100%;
     float: right;
-    padding: 15px 20px;
+    padding: 15px 0px 0px 40px;
 }
 
 .carousel-date {
@@ -269,11 +322,11 @@
     color: #000;
 }
 
-.slick-dots {
+#container-carousel .slick-dots {
     bottom: -60px!important;
 }
 
-.slick-dots li {
+#container-carousel .slick-dots li {
     text-align: center;
     overflow: visible;
     width: 11.4%!important;
@@ -282,11 +335,11 @@
     background-color: #aaaaaa;
 }
 
-.slick-dots li button::before {
+#container-carousel .slick-dots li button::before {
     content: none!important;
 }
 
-.slick-dots li button {
+#container-carousel .slick-dots li button {
     width: 36px!important;
     height: 36px!important;
     border-radius: 51%;
@@ -300,85 +353,103 @@
     transition: transform .5s ease;
 }
 
-.slick-dots li:nth-of-type(9) {
+#container-carousel .slick-dots li:nth-of-type(8) {
     background-color: transparent;
     max-width: 36px;
 }
 
-.slick-active button {
+#container-carousel .slick-active button {
     -webkit-transform: scale(1.75);
     -ms-transform: scale(1.75);
     transform: scale(1.75);
 }
 
-#slick-slide-control00 {
+#container-carousel #slick-slide-control02 {
+    background-color: #2c2c2a!important;
+    background-image: url(../images/icon-story.png);
+    background-size: 80% 80% !important;
+
+}
+
+#container-carousel #slick-slide-control05 {
     background-color: #000!important;
-    background-image: url(../images/underdog-thumb.png);
+    background-image: url(../images/icon-juanpub.png);
+    background-size: 50% 80% !important;
 }
 
-#slick-slide-control01 {
-    background-color: #dad9de!important;
-    background-image: url(../images/mt-thumb.png);
-}
-
-#slick-slide-control03 {
-    background-color: #fff!important;
-    background-image: url(../images/expansion-thumb.png);
+#container-carousel #slick-slide-control03 {
+    background-color: #2c825a!important;
+    background-image: url(../images/icon_jfc.png);
     background-size: 70% 70% !important;
 }
 
-#slick-slide-control02 {
-    background-color: #2f52a9!important;
-    background-image: url(../images/telcel-thumb.png);
+#container-carousel #slick-slide-control04 {
+    background-color: #2c825a!important;
+    background-image: url(../images/icon-dona.png);
+    background-size: 70% 50% !important;
 }
 
-#slick-slide-control04 {
+#container-carousel #slick-slide-control01 {
     background-color: #000!important;
-    background-image: url(../images/icon_juanfutbol.svg);
-    background-size: 80% 80% !important;
+    background-image: url(../images/icon-esports.png);
+    background-size: 70% 50% !important;
 }
 
-#slick-slide-control08 {
-    background-color:#d50032!important;
-    background-image: url(../images/icon_jb.svg);
-    background-size: 50% 60% !important;
+#container-carousel #slick-slide-control07 {
+    background-color:#211b5b!important;
+    background-image: url(../images/icon-fifa.png);
+    background-size: 65% 30% !important;
 }
 
-#slick-slide-control07 {
-    background-color:#a512d6!important;
-    background-image: url(../images/logo_frida_w.svg);
-    background-size: 65% 65% !important;
-}
-
-#slick-slide-control05 {
+#container-carousel #slick-slide-control00 {
     background-color:#000!important;
-    background-image: url(../images/penta_icon.svg);
-    background-size: 60% 60% !important;
+    background-image: url(../images/icon-spotify.png);
+    background-size: 70% 70% !important;
 }
 
-#slick-slide-control06 {
-    background-color:#000!important;
-    background-image: url(../images/tikitaka_icon.svg);
+#container-carousel #slick-slide-control06 {
+    background-color:#142e80!important;
+    background-image: url(../images/icon-paquito.png);
+    background-size: 70% 70% !important;
 }
 
-#estrategia, #experiencia, #contenido-item {
-    display: none;
+.txt-video-container {
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    z-index: 9999;
+    padding: 10px;
 }
 
-.video-container .title-section {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
+.green-title { 
+    font-family: 'Proxima-Nova-Black', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #6cd542;
+    font-weight: 900;
+    margin-top: 20px;
 }
 
-.video-container .container {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
+.video-section .container {
+    margin-top: 20px!important;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px!important;
+}
+
+.video-section .slick-dots {
+    bottom: 0px!important;
+}
+
+.video-section .slick-dots li.slick-active button:before {
+    color: #6cd542;
+    font-size: 15px;
+}
+
+.video-section .slick-dots li button:before {
+    font-size: 15px;
+    color: #6cd542;
 }
 
 .title-section {
@@ -442,12 +513,12 @@
 }
 
 #team {
-    background-color: #fff;
+    background-color: #000;
     padding: 70px 0px;
 }
 
 #team .container .title-section {
-    color: #000;
+    color: #6cd542;
 }
 
 #team .container {
@@ -467,6 +538,7 @@
 .person-photo img {
     width: 100%;
     height: 100%;
+    border-radius: 51%;
 }
 
 .person-name {
@@ -475,14 +547,14 @@
     font-family: 'Proxima-Nova-Extrabold';
     font-size: 22px;
     font-weight: 900;
-    color: #000;
+    color: #fff;
 }
 
 .person-job {
     text-align: center;
     font-family: 'Proxima-Nova-Regular';
-    font-size: 22px;
-    color: #000;
+    font-size: 23px;
+    color: #fff;
 }
 
 #audiencia {
@@ -561,7 +633,11 @@
     background-image: url(../images/tik-tok-w.png);
 }
 
-#txt-count, #percentage, #millions, #miles, .final {
+#youtube-w {
+    background-image: url(../images/youtube-w.png);
+}
+
+#txt-count {
     display: none;
 }
 
@@ -580,9 +656,14 @@
 }
 
 #video-galery-container {
-    width: 1310px;
+    display: block;
+    width: 1150px;
     margin: auto;
-    overflow: auto;
+}
+
+#scroll-galery {
+    overflow-x: scroll;
+    display: flex;
 }
 
 .video-galery-item {
@@ -651,6 +732,31 @@
     margin: 80px auto;
 }
 
+#contact-section {
+    width: 100%;
+    padding: 150px 0px;
+    background-color: #000;
+}
+
+#contact-section .title-section {
+    width: 100%;
+    text-align: center;
+}
+
+.title-contact {
+    font-family: 'Proxima-Nova-Bold', sans-serif;
+    font-size: 30px;
+    color: #6cd542;
+    text-align: center;
+}
+
+.email-contact {
+    font-family: 'Proxima-Nova-Regular', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+
 #client {
     background-color: #fff;
     padding: 70px 0px;
@@ -683,8 +789,12 @@
     display: none;
 }
 
+.align-self-center .client-item {
+    height: 150px;
+}
+
 #cancha .row .col-1 {
-    width: 12%!important;
+    width: 14%!important;
 }
 
 #cancha .row .col-1:nth-of-type(1) .client-item {
@@ -707,59 +817,57 @@
 }
 
 #cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(1) {
-    background-image: url(../images/bundesliga.png);
-    background-size: 70% 55%;
+    background-image: url(../images/toyota.png);
 }
 #cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(2) {
-    background-image: url(../images/innovasport.png);
+    background-image: url(../images/puma.png);
 }
 #cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(3) {
-    background-image: url(../images/samsung.png);
+    background-image: url(../images/meat.png);
 }
 #cancha .row .col-1:nth-of-type(3) .client-item:nth-of-type(4) {
-    background-image: url(../images/patriots.png);
+    background-image: url(../images/samsung.png);
 }
 
 #cancha .row .col-1:nth-of-type(4) .client-item:nth-of-type(1) {
-    background-image: url(../images/game-pass.png);
-    height: 90px;
+    background-image: url(../images/banorte.png);
+}
+#cancha .row .col-1:nth-of-type(4) .client-item:nth-of-type(2) {
+    background-image: url(../images/lawson.png);
 }
 
 #cancha .row .col-1:nth-of-type(5) .client-item:nth-of-type(1) {
-    background-image: url(../images/telcle.png);
-    height: 48%;
+    background-image: url(../images/spotify.png);
 }
 #cancha .row .col-1:nth-of-type(5) .client-item:nth-of-type(2) {
-    background-image: url(../images/spotify.png);
-    height: 48%;
+    background-image: url(../images/vw.png);
+    background-size: 80%;
 }
 
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(1) {
     background-image: url(../images/caliente.png);
 }
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(2) {
-    background-image: url(../images/liga-mx.png);
+    background-image: url(../images/oppo.png);
 }
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(3) {
-    background-image: url(../images/tudn.png);
+    background-image: url(../images/tecate.png);
 }
 #cancha .row .col-1:nth-of-type(6) .client-item:nth-of-type(4) {
-    background-image: url(../images/tecate.png);
+    background-image: url(../images/fedex.png);
 }
 
 #cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(1) {
     background-image: url(../images/ea-sport.png);
-    background-size: 80% 60%;
 }
 #cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(2) {
-    background-image: url(../images/nfl.png);
-    background-size: 70% 70%;
+    background-image: url(../images/telcle.png);
 }
 #cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(3) {
     background-image: url(../images/cocacola.png);
 }
 #cancha .row .col-1:nth-of-type(7) .client-item:nth-of-type(4) {
-    background-image: url(../images/mextenis.png);
+    background-image: url(../images/bbva.png);
 }
 
 #cancha .row .col-1:nth-of-type(8) .client-item:nth-of-type(1) {
@@ -786,56 +894,60 @@
 }
 
 #cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(1) {
-    background-image: url(../images/bundesliga.png);
-    background-size: 80% 70%!important;
+    background-image: url(../images/toyota.png);
 }
 #cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(2) {
-    background-image: url(../images/innovasport.png);
+    background-image: url(../images/puma.png);
 }
 #cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(3) {
-    background-image: url(../images/samsung.png);
+    background-image: url(../images/meat.png);
 }
 #cancha-vertical .row:nth-of-type(3) .client-item:nth-of-type(4) {
-    background-image: url(../images/patriots.png);
+    background-image: url(../images/samsung.png);
 }
 
 #cancha-vertical .row:nth-of-type(4) .client-item:nth-of-type(1) {
-    background-image: url(../images/game-pass.png);
+    background-image: url(../images/banorte.png);
+}
+#cancha-vertical .row:nth-of-type(4) .client-item:nth-of-type(2) {
+    background-image: url(../images/lawson.png);
+    background-size: 70%;
 }
 
 #cancha-vertical .row:nth-of-type(5) .client-item:nth-of-type(1) {
-    background-image: url(../images/telcle.png);
+    background-image: url(../images/spotify.png);
+    background-size: 60%;
 }
 #cancha-vertical .row:nth-of-type(5) .client-item:nth-of-type(2) {
-    background-image: url(../images/spotify.png);
+    background-image: url(../images/vw.png);
+    background-size: 40%;
 }
 
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(1) {
     background-image: url(../images/caliente.png);
 }
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(2) {
-    background-image: url(../images/liga-mx.png);
+    background-image: url(../images/oppo.png);
 }
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(3) {
-    background-image: url(../images/tudn.png);
+    background-image: url(../images/tecate.png);
 }
 #cancha-vertical .row:nth-of-type(6) .client-item:nth-of-type(4) {
-    background-image: url(../images/tecate.png);
+    background-image: url(../images/fedex.png);
 }
 
 #cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(1) {
     background-image: url(../images/ea-sport.png);
-    background-size: 80% 70%!important;
+    background-size: 70% 50%!important;
 }
 #cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(2) {
-    background-image: url(../images/nfl.png);
-    background-size: 70% 70%!important;
+    background-image: url(../images/telcle.png);
 }
 #cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(3) {
     background-image: url(../images/cocacola.png);
 }
 #cancha-vertical .row:nth-of-type(7) .client-item:nth-of-type(4) {
-    background-image: url(../images/mextenis.png);
+    background-image: url(../images/tudn.png);
 }
 
 #cancha-vertical .row:nth-of-type(8) .client-item:nth-of-type(1) {
@@ -845,18 +957,30 @@
 #footer-section {
     width: 100%;
     padding: 50px 0px;
-    background-color: #000;
+    background-color: #fff;
 }
 
 #footer-section .container .logo {
     width: 150px;
     height: 100px;
     margin: auto;
-    margin-bottom: 130px;
-    background-image: url(../images/underdog.png);
+    margin: 30px auto 0px auto;
+    background-image: url(../images/ulogo.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#footer-section .container .info-logo {
+    width: 180px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 15px;
+    background-image: url(../images/logo_juanfutbol_b.svg);
+}
+
+#footer-section .txt-sub {
+    color: #000;
 }
 
 #combo {
@@ -884,7 +1008,7 @@
 }
 
 #date-dev {
-    color: #fff;
+    color: #000;
     font-size: 14px;
     font-family: 'Proxima-Nova-Regular';
     text-align: right;
@@ -893,7 +1017,7 @@
 .footer-title-section {
     font-family: 'Proxima-Nova-Black', sans-serif;
     font-size: 18px;
-    color: #fff;
+    color: #000;
     font-weight: 900;
     cursor: pointer;
 }
@@ -901,7 +1025,7 @@
 .footer-item {
     font-family: 'Proxima-Nova-Regular', sans-serif;
     font-size: 14px;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
@@ -911,6 +1035,20 @@
 
 .footer-item-container:nth-of-type(4) {
     padding-left: 0px!important;
+}
+
+.footer-logo {
+    background-image: url(../images/underdog-black.png);
+    width: 150px;
+    height: 100px;
+    margin: 30px auto 0px auto;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer-section .container .row .col-12 .row {
+    height: 320px;
 }
 
 #container-timeline {
@@ -942,36 +1080,16 @@
     background-position: center;
 }
 
-.timeline-item:nth-of-type(1) .timeline-img-container .timeline-img {
-    background-size: 70% 50%;
-}
-
-.timeline-item:nth-of-type(2) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(4) .timeline-img-container .timeline-img {
-    background-size: 80% 55%;
-}
-
-.timeline-item:nth-of-type(3) .timeline-img-container .timeline-img {
-    background-size: 80% 55%;
-}
-
-.timeline-item:nth-of-type(5) .timeline-img-container .timeline-img {
-    background-size: 80% 80%;
-}
-
-.timeline-item:nth-of-type(6) .timeline-img-container .timeline-img {
-    background-size: 60% 60%;
-}
-
-.timeline-item:nth-of-type(7) .timeline-img-container .timeline-img {
+.timeline-item:nth-of-type(1) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(4) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(6) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(7) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(3) .timeline-img-container .timeline-img  {
     background-size: 70% 70%;
 }
 
-.timeline-item:nth-of-type(8) .timeline-img-container .timeline-img {
-    background-size: 60% 55%;
+.timeline-item:nth-of-type(2) .timeline-img-container .timeline-img {
+    background-size: 80% 60%;
 }
 
-.timeline-item:nth-of-type(9) .timeline-img-container .timeline-img {
-    background-size: 80% 55%;
+.timeline-item:nth-of-type(5) .timeline-img-container .timeline-img, .timeline-item:nth-of-type(8) .timeline-img-container .timeline-img {
+    background-size: 70% 40%;
 }
 
 .timeline-txt {
@@ -984,7 +1102,7 @@
     top: 0px;
     left: 1.9rem;
     width: 0.08rem;
-    height: calc(95% - 3rem);
+    height: calc(94% - 3rem);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     background-color: rgb(204, 204, 204);
@@ -1003,10 +1121,35 @@
     color: #363636;
 }
 
+.slick-prev {
+    left: 25px!important;
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.slick-next {
+    right: 25px!important;
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px!important;
+}
+
 @media screen and (max-width: 1310px) {
     #video-galery-container {
         width: 90%;
-        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #info {
+        height: 800px;
+    }
+
+    #info p {
+        margin-bottom: 10px;
     }
 }
 
@@ -1038,8 +1181,8 @@
         font-size: 19px;
     }
 
-    #info p {
-        font-size: 31px;
+    #info {
+        height: 900px;
     }
 
     #cancha {
@@ -1055,15 +1198,19 @@
 
     .nav-link{
         font-size: 18px;
-        text-align: right;
+        text-align: left;
+    }
+
+    #social-links {
+        display: block;
+    }
+
+    .navbar-brand {
+        display: none!important;
     }
 
     #logo-container {
         width: 90%;
-    }
-
-    #info p {
-        font-size: 28px;
     }
 
     .video-item {
@@ -1078,11 +1225,19 @@
         display: block;
     }
 
+    #info {
+        height: 600px;
+    }
+
+    .txt-animate {
+        font-size: 23px;
+    }
+
     #cancha {
         height: 300px;
     }
 
-    #footer-section .container .logo, #combo select, #date-dev {
+    #footer-logo, #combo select, #date-dev {
         float: none;
         margin: 30px auto;
     }
@@ -1103,9 +1258,25 @@
         padding: 60px 0px;
     }
 
+    .align-self-center .client-item {
+        height: 70px;
+    }
+
     .footer-item-container {
         margin: 20px 0px;
         padding-left: 30px!important;
+    }
+
+    .green-title {
+        font-size: 16px;
+    }
+
+    .txt-sub {
+        font-size: 13px;
+    }
+
+    .title-section {
+        font-size: 30px;
     }
 }
 
@@ -1122,23 +1293,14 @@
     }
 
     #info {
-        height: 660px;
-    }
-
-    #info p {
-        font-size: 20px;
-    }
-
-    #info span {
-        font-size: 35px;
-        margin-top: 50px;
-        text-align: right;
+        height: 770px;
     }
 
     .video-item {
-        float: none;
-        width: 250px;
-        margin: 20px auto;
+        width: 150px;
+        height: 100px;
+        margin: 0px;
+        margin-right: 2px;
     }
 
     #cover-info {
@@ -1153,6 +1315,10 @@
 
     .number-audiencia, #countdown, #txt-count, #txt-count span {
         font-size: 50px;
+    }
+
+    #video-galery .container .title-section {
+        font-size: 40px;
     }
 
     #cancha {
@@ -1171,7 +1337,7 @@
     }
 
     #cancha-vertical .row {
-        height: 12%!important;
+        height: 12.5%!important;
     }
 
     #cancha-vertical .row .client-item {
